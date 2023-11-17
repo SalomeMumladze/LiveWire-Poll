@@ -25,6 +25,6 @@
             </div>
         @endforeach
       </div>
-      <button type="submit" class="btn mt-4">Create Poll</button>
+      <button type="submit"  class="btn mt-4">Create Poll</button>
     </form>
   </div>

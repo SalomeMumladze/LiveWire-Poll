@@ -5,11 +5,12 @@
           {{ $poll->title }}
         </h3>
         @foreach ($poll->options as $option)
-          <div class="mb-2">
-            <button class="btn">Vote</button>
-            {{ $option->name }} ({{ $option->votes->count() }})
-          </div>
-        @endforeach
+        <div class="mb-2">
+          <button class="btn"
+            wire:click="vote({{ $option->id }})">Vote</button>
+          {{ $option->name }} ({{ $option->votes->count() }})
+        </div>
+      @endforeach
       </div>
     @empty
       <div class="text-gray-500">

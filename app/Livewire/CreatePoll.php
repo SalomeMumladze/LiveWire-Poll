@@ -53,5 +53,8 @@ class CreatePoll extends Component
                     ->all()
             );
         $this->reset(['title', 'options']);
+
+        // dispatch for see automaticaly poll after created
+        $this->dispatch('pollCreated');
     }
 }
